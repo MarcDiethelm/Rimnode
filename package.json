@@ -1,0 +1,45 @@
+{
+  "name": "rimnode",
+  "productName": "Rimnode",
+  "version": "0.0.0",
+  "description": "A mod manager for the Rimworld sci fi colony sim game",
+  "license": "MIT",
+  "repository": "marcdiethelm/rimnode",
+  "author": {
+    "name": "Marc Diethelm",
+    "email": "marc@web5.me",
+    "url": "marcd.ch/rimnode"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "electronVersion": "0.33.3",
+  "scripts": {
+    "test": "xo",
+    "start": "electron .",
+    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=$npm_package_electronVersion"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "electron-app", "rimworld", "mod manager"
+  ],
+  "dependencies": {
+    "electron-debug": "^0.2.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.0.0",
+    "electron-prebuilt": "^0.33.3",
+    "xo": "^0.9.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}
